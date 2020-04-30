@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag sinatra-hello-world:$(date +%s)
+      run: docker build . --file Dockerfile --tag jedtrinidad/sinatra-hello-world:$(date +%s)
     - name: Login to Docker
       run: docker login --username "jedtrinidad" --password ${{ secrets.DOCKER_PAT }}
     - name: Push the Docker Image
