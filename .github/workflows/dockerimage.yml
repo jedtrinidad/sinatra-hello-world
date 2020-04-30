@@ -19,5 +19,7 @@ jobs:
       with:
         username: jedtrinidad
         password: ${{ secrets.DOCKER_PAT }}
+        repository: jedtrinidad/sinatra-hello-world 
+        tags: latest
 
       
