@@ -2,10 +2,11 @@ FROM ruby:2.7
 
 WORKDIR /usr/src/app
 
-RUN bundle config --global frozen 1 \
-    bundle install
+RUN bundle config --global frozen 1
 
 COPY Gemfile Gemfile.lock ./
+
+RUN bundle install
 
 COPY . .
 
